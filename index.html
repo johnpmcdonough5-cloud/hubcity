@@ -403,6 +403,65 @@
   </div>
 </div>
 
+<section class="form-section" id="contact-form">
+  <div class="wrap">
+    <div class="sec-label">Contact Us</div>
+    <h2>Send Us a Message</h2>
+    <p class="lead">Questions about feed, fencing, or availability? Drop us a line and we'll get right back to you.</p>
+    <div class="form-card">
+      <!-- Replace this form's action with your GoHighLevel form/webhook, or embed your GHL form here -->
+      <form action="#" method="POST">
+        <div class="field-row">
+          <div>
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="(319) 555-0123" required>
+          </div>
+        </div>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
+
+        <div class="consent">
+          <input type="checkbox" id="consent-transactional" name="sms_consent_transactional">
+          <label for="consent-transactional" style="margin:0; font-weight:normal; color:var(--muted);">
+            I consent to receive transactional messages (such as replies to my inquiry,
+            order updates, and appointment reminders) from Hub City Livestock Supply LLC
+            at the phone number provided. Message frequency may vary. Message &amp; data
+            rates may apply. Reply HELP for help or STOP to opt out.
+          </label>
+        </div>
+
+        <div class="consent" style="margin-top:0;">
+          <input type="checkbox" id="consent-marketing" name="sms_consent_marketing">
+          <label for="consent-marketing" style="margin:0; font-weight:normal; color:var(--muted);">
+            I consent to receive marketing and promotional messages from Hub City Livestock
+            Supply LLC at the phone number provided. Message frequency may vary. Message
+            &amp; data rates may apply. Reply HELP for help or STOP to opt out. Consent is
+            not a condition of purchase. See our <a href="privacy.html">Privacy Policy</a>
+            and <a href="terms.html">Terms of Service</a>.
+          </label>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <p class="disclosure">
+      Submitting this form allows Hub City Livestock Supply LLC to respond to your inquiry
+      by phone or email. SMS text messages are sent only if you check the consent box(es)
+      above. Entering a phone number alone does not grant permission to send SMS messages.
+      Your information will never be sold or shared with third parties for marketing
+      purposes; SMS opt-in data is not shared with third parties except SMS service providers.
+    </p>
+  </div>
+</section>
+
 <section class="about" id="about">
   <div class="wrap">
     <div class="cols">
@@ -462,66 +521,15 @@
       </div>
       <div class="info-card">
         <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Phone</h3>
-        <!-- TODO: replace placeholder with real phone -->
-        <p><a href="tel:+13195550100">(319) 555-0100</a></p>
+        <p><a href="tel:+17208275150">(720) 827-5150</a></p>
         <p style="margin-top:6px; color:var(--muted); font-size:0.88rem;">Call or text during business hours</p>
       </div>
       <div class="info-card">
         <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</h3>
-        <!-- TODO: replace placeholder with real email -->
-        <p><a href="mailto:info@hubcitylivestock.com">info@hubcitylivestock.com</a></p>
+        <p><a href="mailto:johnpmcdonough5@gmail.com">johnpmcdonough5@gmail.com</a></p>
         <p style="margin-top:6px; color:var(--muted); font-size:0.88rem;">We reply within one business day</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="form-section" id="contact-form">
-  <div class="wrap">
-    <div class="sec-label">Contact Us</div>
-    <h2>Send Us a Message</h2>
-    <p class="lead">Questions about feed, fencing, or availability? Drop us a line and we'll get right back to you.</p>
-    <div class="form-card">
-      <!-- Replace this form's action with your GoHighLevel form/webhook, or embed your GHL form here -->
-      <form action="#" method="POST">
-        <div class="field-row">
-          <div>
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" placeholder="John Smith" required>
-          </div>
-          <div>
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" placeholder="(319) 555-0123" required>
-          </div>
-        </div>
-
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
-
-        <div class="consent">
-          <input type="checkbox" id="consent" name="sms_consent" required>
-          <label for="consent" style="margin:0; font-weight:normal; color:var(--muted);">
-            By checking this box, I consent to receive calls, emails, and SMS text messages
-            from Hub City Livestock Supply LLC regarding my inquiry, including order updates,
-            appointment reminders, and customer care. Message frequency varies. Message and
-            data rates may apply. Reply STOP to opt out at any time, or HELP for help.
-            Consent is not a condition of purchase. See our
-            <a href="privacy.html">Privacy Policy</a> and
-            <a href="terms.html">Terms of Service</a>.
-          </label>
-        </div>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-    <p class="disclosure">
-      By submitting this form, you agree to be contacted by Hub City Livestock Supply LLC
-      via phone, email, or text message at the contact information provided. Your
-      information will never be sold or shared with third parties for marketing purposes.
-    </p>
   </div>
 </section>
 
