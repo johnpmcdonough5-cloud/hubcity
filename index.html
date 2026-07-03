@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hub City Livestock Supply LLC — Oelwein, Iowa</title>
+<meta name="description" content="Hub City Livestock Supply LLC — supplying anything farms and hobbyists need, from feed to sod, in Oelwein, Iowa. Visit us at 955 N Frederick Ave.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #26402a;
+    --green-deep: #1a2e1d;
+    --green-mid: #33543a;
+    --cream: #faf7f0;
+    --cream-dark: #f1ecdf;
+    --amber: #c98a2d;
+    --amber-dark: #a86f1e;
+    --text: #26251f;
+    --muted: #6f6d62;
+    --line: #e4ded0;
+    --shadow: 0 10px 30px rgba(26, 46, 29, 0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  h1, h2, h3, .brand { font-family: 'Fraunces', Georgia, serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Header ---------- */
+  header {
+    background: rgba(26, 46, 29, 0.97);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 6px 24px rgba(0,0,0,0.18);
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.2px; }
+  .brand svg { flex: none; }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a {
+    color: #d9d5c5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 99px;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav a:hover { color: #fff; background: rgba(255,255,255,0.10); }
+  nav a.cta {
+    background: var(--amber);
+    color: #fff;
+    font-weight: 600;
+    margin-left: 6px;
+  }
+  nav a.cta:hover { background: var(--amber-dark); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 110px 24px 120px;
+    background:
+      radial-gradient(1100px 480px at 50% -10%, rgba(201,138,45,0.28), transparent 60%),
+      linear-gradient(165deg, #1a2e1d 0%, #26402a 55%, #2e4c33 100%);
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 90px);
+    pointer-events: none;
+  }
+  .hero .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #e8c584;
+    background: rgba(201,138,45,0.14);
+    border: 1px solid rgba(232,197,132,0.35);
+    border-radius: 99px;
+    padding: 7px 16px;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 3.7rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+  .hero h1 .accent { color: #e8c584; font-style: italic; }
+  .hero p {
+    font-size: 1.12rem;
+    color: #c9cfbf;
+    max-width: 580px;
+    margin: 0 auto 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  }
+  .btn-primary {
+    background: var(--amber);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(201,138,45,0.35);
+  }
+  .btn-primary:hover { background: var(--amber-dark); transform: translateY(-2px); }
+  .btn-ghost {
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.35);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.10); transform: translateY(-2px); }
+
+  /* ---------- Trust strip ---------- */
+  .strip {
+    background: var(--green-deep);
+    color: #b9c2ac;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .strip .wrap {
+    display: flex;
+    justify-content: center;
+    gap: 12px 48px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .strip span { display: inline-flex; align-items: center; gap: 9px; }
+  .strip svg { color: #e8c584; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 88px 0; }
+  .sec-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber-dark);
+    margin-bottom: 10px;
+  }
+  section h2 {
+    font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- About ---------- */
+  .about .cols {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .about p { color: #4d4b41; font-size: 1.05rem; margin-bottom: 14px; }
+  .about-panel {
+    background: linear-gradient(160deg, var(--green) 0%, var(--green-mid) 100%);
+    border-radius: 16px;
+    padding: 36px;
+    color: #fff;
+    box-shadow: var(--shadow);
+  }
+  .about-panel h3 { font-size: 1.2rem; margin-bottom: 18px; color: #e8c584; }
+  .about-panel ul { list-style: none; }
+  .about-panel li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.95rem;
+    color: #dfe4d5;
+  }
+  .about-panel li:last-child { border-bottom: none; }
+  .about-panel svg { flex: none; margin-top: 3px; color: #e8c584; }
+  @media (max-width: 820px) { .about .cols { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ---------- Products ---------- */
+  .products { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .products .lead { color: var(--muted); max-width: 560px; margin-bottom: 40px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+  }
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 26px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: #d8cfb8;
+  }
+  .card .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--green);
+    color: #e8c584;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .card h3 { color: var(--green); font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+  .card p { font-size: 0.93rem; color: var(--muted); }
+
+  /* ---------- Location ---------- */
+  .location .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 8px;
+  }
+  .info-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 10px rgba(26,46,29,0.05);
+  }
+  .info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .info-card h3 svg { color: var(--amber-dark); }
+  .info-card p { font-size: 0.98rem; color: #4d4b41; }
+  .info-card a { color: var(--amber-dark); font-weight: 600; text-decoration: none; }
+  .info-card a:hover { text-decoration: underline; }
+
+  /* ---------- Contact form ---------- */
+  .form-section {
+    background:
+      radial-gradient(800px 400px at 80% 0%, rgba(201,138,45,0.16), transparent 55%),
+      linear-gradient(165deg, var(--green-deep) 0%, var(--green) 100%);
+    color: #fff;
+  }
+  .form-section .sec-label { color: #e8c584; }
+  .form-section h2 { color: #fff; }
+  .form-section .lead { color: #c9cfbf; max-width: 540px; margin-bottom: 36px; }
+  .form-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 640px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+    color: var(--text);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } .form-card { padding: 28px 22px; } }
+  form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 18px 0 6px;
+    color: var(--green);
+  }
+  .field-row > div > label:first-child, form > label:first-of-type { margin-top: 0; }
+  form input, form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    font-size: 0.98rem;
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--cream);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(201,138,45,0.18);
+    background: #fff;
+  }
+  form textarea { min-height: 110px; resize: vertical; }
+  .consent {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 16px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .consent input { width: auto; margin-top: 3px; accent-color: var(--green); }
+  .consent a { color: var(--amber-dark); }
+  form button {
+    width: 100%;
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    font-family: 'Inter', Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 6px 18px rgba(201,138,45,0.3);
+  }
+  form button:hover { background: var(--amber-dark); transform: translateY(-1px); }
+  .disclosure {
+    font-size: 0.78rem;
+    color: #a9b39c;
+    max-width: 640px;
+    margin-top: 18px;
+    line-height: 1.6;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--green-deep);
+    color: #a9b39c;
+    padding: 36px 24px;
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  footer a { color: #d9d5c5; text-decoration: none; margin-left: 18px; }
+  footer a:hover { color: #fff; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e8c584" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+      Hub City Livestock Supply
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#location">Location</a>
+      <a href="#contact-form" class="cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kicker">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+    Oelwein, Iowa
+  </div>
+  <h1>Everything Your Farm Needs,<br><span class="accent">Right Down the Road</span></h1>
+  <p>From feed to sod and everything in between — supplying farms and hobbyists with honest, local service in Oelwein and Eastern Iowa.</p>
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="#contact-form">Get in Touch</a>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Locally Owned &amp; Operated</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality Feed &amp; Supplies</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Serving Eastern Iowa</span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="sec-label">About Us</div>
+        <h2>Farm Supply the Way It Should Be</h2>
+        <p>Hub City Livestock Supply LLC is a locally owned farm and livestock supply store serving Oelwein and the surrounding Eastern Iowa communities.</p>
+        <p>We carry the everyday essentials farmers and hobbyists count on — quality feed, sturdy fencing, animal health products, and honest service from people who know livestock. Stop by the store or send us a message; we're happy to help you find exactly what your operation needs.</p>
+      </div>
+      <div class="about-panel">
+        <h3>Why folks shop with us</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Straight answers from people who raise livestock themselves</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stocked for cattle, hogs, poultry, goats, and horses</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fair prices without the big-box runaround</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Easy in, easy out — right on N Frederick Ave</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="services">
+  <div class="wrap">
+    <div class="sec-label">Our Services</div>
+    <h2>One Call, One Stop</h2>
+    <p class="lead">We keep it simple: whatever your farm or homestead needs, we supply it. If we don't have it on hand, we'll source it for you.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Supplies for Farms</h3>
+        <p>Anything your operation needs — from feed to sod and everything in between. One call and we'll take care of it.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+        <h3>Supplies for Hobbyists</h3>
+        <p>Backyard flock, a few goats, or a full homestead — we stock everything hobbyists need to keep their animals happy and healthy.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+        <h3>Special Requests</h3>
+        <p>Need something we haven't listed? Just ask. We'll track it down and have it ready for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="wrap">
+    <div class="sec-label">Find Us</div>
+    <h2>Location &amp; Contact Info</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Address</h3>
+        <p>955 N Frederick Ave<br>Oelwein, IA 50662</p>
+        <p style="margin-top:12px;"><a href="https://www.google.com/maps/search/?api=1&amp;query=955+N+Frederick+Ave,+Oelwein,+IA+50662" target="_blank" rel="noopener">Get directions →</a></p>
+      </div>
+      <div class="info-card">
+        <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Phone</h3>
+        <!-- TODO: replace placeholder with real phone -->
+        <p><a href="tel:+13195550100">(319) 555-0100</a></p>
+        <p style="margin-top:6px; color:var(--muted); font-size:0.88rem;">Call or text during business hours</p>
+      </div>
+      <div class="info-card">
+        <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</h3>
+        <!-- TODO: replace placeholder with real email -->
+        <p><a href="mailto:info@hubcitylivestock.com">info@hubcitylivestock.com</a></p>
+        <p style="margin-top:6px; color:var(--muted); font-size:0.88rem;">We reply within one business day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="contact-form">
+  <div class="wrap">
+    <div class="sec-label">Contact Us</div>
+    <h2>Send Us a Message</h2>
+    <p class="lead">Questions about feed, fencing, or availability? Drop us a line and we'll get right back to you.</p>
+    <div class="form-card">
+      <!-- Replace this form's action with your GoHighLevel form/webhook, or embed your GHL form here -->
+      <form action="#" method="POST">
+        <div class="field-row">
+          <div>
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="(319) 555-0123" required>
+          </div>
+        </div>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
+
+        <div class="consent">
+          <input type="checkbox" id="consent" name="sms_consent" required>
+          <label for="consent" style="margin:0; font-weight:normal; color:var(--muted);">
+            By checking this box, I consent to receive calls, emails, and SMS text messages
+            from Hub City Livestock Supply LLC regarding my inquiry, including order updates,
+            appointment reminders, and customer care. Message frequency varies. Message and
+            data rates may apply. Reply STOP to opt out at any time, or HELP for help.
+            Consent is not a condition of purchase. See our
+            <a href="privacy.html">Privacy Policy</a> and
+            <a href="terms.html">Terms of Service</a>.
+          </label>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <p class="disclosure">
+      By submitting this form, you agree to be contacted by Hub City Livestock Supply LLC
+      via phone, email, or text message at the contact information provided. Your
+      information will never be sold or shared with third parties for marketing purposes.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Hub City Livestock Supply LLC &middot; 955 N Frederick Ave, Oelwein, IA 50662</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
